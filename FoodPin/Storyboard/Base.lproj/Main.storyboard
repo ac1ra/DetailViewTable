@@ -686,13 +686,14 @@
                         <outlet property="descriptionTextView" destination="d15-Le-L3q" id="O3G-oa-zac"/>
                         <outlet property="nameTextField" destination="gbr-hV-UYC" id="hY5-Ru-aAm"/>
                         <outlet property="phoneTextField" destination="gc3-74-iEp" id="8yn-hg-GcL"/>
+                        <outlet property="photoImageView" destination="wBH-fX-EoU" id="g7U-ei-nVj"/>
                         <outlet property="typeTextField" destination="caB-Gc-Axf" id="5MY-YA-YIt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bY6-WB-eKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fqR-f1-Ysu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2894" y="704"/>
+            <point key="canvasLocation" x="2882" y="705"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="5Rv-1A-oCi">
