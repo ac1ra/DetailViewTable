@@ -2,15 +2,15 @@
 //  RestaurantDetailSeparatorCell.swift
 //  FoodPin
 //
-//  Created by ac1ra on 14/08/2019.
-//  Copyright © 2019 AppCoda. All rights reserved.
+//  Created by Simon Ng on 17/9/2017.
+//  Copyright © 2017 AppCoda. All rights reserved.
 //
 
 import UIKit
 
 class RestaurantDetailSeparatorCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

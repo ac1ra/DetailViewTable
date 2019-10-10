@@ -2,8 +2,8 @@
 //  RestaurantDetailMapCell.swift
 //  FoodPin
 //
-//  Created by ac1ra on 14/08/2019.
-//  Copyright © 2019 AppCoda. All rights reserved.
+//  Created by Simon Ng on 17/9/2017.
+//  Copyright © 2017 AppCoda. All rights reserved.
 //
 
 import UIKit
@@ -11,8 +11,8 @@ import MapKit
 
 class RestaurantDetailMapCell: UITableViewCell {
 
-    @IBOutlet weak var mapViewSmall: MKMapView!
-
+    @IBOutlet var mapView: MKMapView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,32 +24,35 @@ class RestaurantDetailMapCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func configMap(location:String){
-        
-        //Get location
+    func configure(location: String) {
+        // Get location
         let geoCoder = CLGeocoder()
         
         print(location)
         geoCoder.geocodeAddressString(location, completionHandler: { placemarks, error in
-            if let error = error{
+            if let error = error {
                 print(error.localizedDescription)
                 return
             }
-            if let placemarks = placemarks{
+            
+            if let placemarks = placemarks {
+                // Get the first placemark
                 let placemark = placemarks[0]
-                //Add annotation
+                
+                // Add annotation
                 let annotation = MKPointAnnotation()
                 
-                if let location = placemark.location{
-                    //Display annotation
+                if let location = placemark.location {
+                    // Display the annotation
                     annotation.coordinate = location.coordinate
-                    self.mapViewSmall.addAnnotation(annotation)
+                    self.mapView.addAnnotation(annotation)
                     
-                    //Set the zoom level
-                    let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 250, longitudinalMeters: 250)
-                    self.mapViewSmall.setRegion(region, animated: false)
+                    // Set the zoom level
+                    let region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 250, 250)
+                    self.mapView.setRegion(region, animated: false)
                 }
             }
+            
         })
     }
 }

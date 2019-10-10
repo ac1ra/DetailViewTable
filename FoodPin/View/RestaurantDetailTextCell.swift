@@ -2,8 +2,8 @@
 //  RestaurantDetailTextCell.swift
 //  FoodPin
 //
-//  Created by Simon Ng on 15/8/2018.
-//  Copyright © 2018 AppCoda. All rights reserved.
+//  Created by Simon Ng on 9/9/2017.
+//  Copyright © 2017 AppCoda. All rights reserved.
 //
 
 import UIKit

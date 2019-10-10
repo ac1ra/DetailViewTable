@@ -2,8 +2,8 @@
 //  RestaurantDetailHeaderView.swift
 //  FoodPin
 //
-//  Created by Simon Ng on 15/8/2018.
-//  Copyright © 2018 AppCoda. All rights reserved.
+//  Created by Simon Ng on 8/9/2017.
+//  Copyright © 2017 AppCoda. All rights reserved.
 //
 
 import UIKit
@@ -11,8 +11,6 @@ import UIKit
 class RestaurantDetailHeaderView: UIView {
 
     @IBOutlet var headerImageView: UIImageView!
-    @IBOutlet var ratingImageView: UIImageView!
-    
     @IBOutlet var nameLabel: UILabel! {
         didSet {
             nameLabel.numberOfLines = 0
@@ -30,5 +28,5 @@ class RestaurantDetailHeaderView: UIView {
             heartImageView.tintColor = .white
         }
     }
-
+    @IBOutlet var ratingImageView: UIImageView!
 }

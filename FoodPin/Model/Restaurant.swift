@@ -2,8 +2,8 @@
 //  Restaurant.swift
 //  FoodPin
 //
-//  Created by Simon Ng on 15/8/2018.
-//  Copyright © 2018 AppCoda. All rights reserved.
+//  Created by Simon Ng on 1/9/2017.
+//  Copyright © 2017 AppCoda. All rights reserved.
 //
 
 import Foundation
@@ -18,6 +18,7 @@ class Restaurant {
     var isVisited: Bool
     var rating: String
     
+    var managedObject: RestaurantMO?
     
     init(name: String, type: String, location: String, phone: String, description: String, image: String, isVisited: Bool, rating: String = "") {
         self.name = name
